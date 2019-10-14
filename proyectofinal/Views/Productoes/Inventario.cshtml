@@ -1,0 +1,74 @@
+﻿@using proyectofinal.Models
+@model List<Inventario>
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<center>
+    <h1><b>Inventario <img src="~/images/logo.png" /></b></h1>
+
+    <hr /><br />
+    <link href="~/css/Estilo123.css" rel="stylesheet" />
+    @foreach (var item in Model)
+    {
+        foreach (var itemempresa in item.Nombre_Empresa)
+        {
+    <div id="inventario">
+        <table border="0" width="75%">
+            <tr>
+                <th colspan="9" id="cl1">
+                    <center><p>@itemempresa.Nombre</p></center>
+                </th>
+            </tr>
+            <tr id="cl2">
+                <th id="cl3">
+                    Nombre
+                </th>
+                <th>
+                    Tipo
+                </th>
+                <th>
+                    Categoria
+                </th>
+                <th>
+                    Peso
+                </th>
+                <th>
+                    Descripcion
+                </th>
+                <th>
+                    Cantidad
+                </th>
+                <th>
+                    Precio
+                </th>
+                <th>
+                    Fecha de ingreso
+                </th>
+                <th>
+                    Codigo de empresa
+                </th>
+                <th></th>
+            </tr>
+            @foreach (var itemproducto in item.listproducto)
+        {
+
+            if (itemproducto.EmpresaId == itemempresa.Id)
+            {
+            <tr>
+                <td>@itemproducto.Nombre</td>
+                <td>@itemproducto.Tipo</td>
+                <td>@itemproducto.Categoria</td>
+                <td>@itemproducto.Peso kg</td>
+                <td>@itemproducto.Descripcion</td>
+                <td>@itemproducto.Cantidad</td>
+                <td>$@itemproducto.Precio</td>
+                <td>@itemproducto.FechaIngreso</td>
+                <td><center>@itemproducto.EmpresaId</center></td>
+            </tr>
+        }
+    }
+        </table>
+    </div><br /><br />
+        }
+    }
+</center>

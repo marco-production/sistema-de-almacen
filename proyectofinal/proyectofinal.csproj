@@ -1,0 +1,81 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <UserSecretsId>aspnet-proyectofinal-45AC6CA4-F70F-46E7-8615-B8241E216C13</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\00000000000000_CreateIdentitySchema.cs" />
+    <Compile Remove="Data\Migrations\00000000000000_CreateIdentitySchema.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180331092257_MyMigration.cs" />
+    <Compile Remove="Data\Migrations\20180331092257_MyMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180401072348_MyMigration.cs" />
+    <Compile Remove="Data\Migrations\20180401072348_MyMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180401072951_MyMigration.cs" />
+    <Compile Remove="Data\Migrations\20180401072951_MyMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180401074635_MyMigration.cs" />
+    <Compile Remove="Data\Migrations\20180401074635_MyMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180401075331_MyMigration.cs" />
+    <Compile Remove="Data\Migrations\20180401075331_MyMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180401095126_MyMigration.cs" />
+    <Compile Remove="Data\Migrations\20180401095126_MyMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180401232410_UpMigration.cs" />
+    <Compile Remove="Data\Migrations\20180401232410_UpMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180401232736_MyMigration.cs" />
+    <Compile Remove="Data\Migrations\20180401232736_MyMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180401232919_MyMigracion.cs" />
+    <Compile Remove="Data\Migrations\20180401232919_MyMigracion.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180401234840_MejorMigracion.cs" />
+    <Compile Remove="Data\Migrations\20180401234840_MejorMigracion.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180401235022_HolaMigracion.cs" />
+    <Compile Remove="Data\Migrations\20180401235022_HolaMigracion.Designer.cs" />
+    <Compile Remove="Migrations\20180402054022_DownMIgration.cs" />
+    <Compile Remove="Migrations\20180402054022_DownMIgration.Designer.cs" />
+    <Compile Remove="Migrations\20180403135154_LaMigracion.cs" />
+    <Compile Remove="Migrations\20180403135154_LaMigracion.Designer.cs" />
+    <Compile Remove="Migrations\20180403224023_RealMigration.cs" />
+    <Compile Remove="Migrations\20180403224023_RealMigration.Designer.cs" />
+    <Compile Remove="Migrations\20180403225946_MyMigracion.cs" />
+    <Compile Remove="Migrations\20180403225946_MyMigracion.Designer.cs" />
+    <Compile Remove="Migrations\20180403230252_MyMigration.cs" />
+    <Compile Remove="Migrations\20180403230252_MyMigration.Designer.cs" />
+    <Compile Remove="Migrations\20180405030127_LaMigration.cs" />
+    <Compile Remove="Migrations\20180405030127_LaMigration.Designer.cs" />
+    <Compile Remove="Migrations\20180405051247_LaMigracion.cs" />
+    <Compile Remove="Migrations\20180405051247_LaMigracion.Designer.cs" />
+    <Compile Remove="Migrations\20180405060523_MyMigration.cs" />
+    <Compile Remove="Migrations\20180405060523_MyMigration.Designer.cs" />
+    <Compile Remove="Migrations\20180408235132_3Migration.cs" />
+    <Compile Remove="Migrations\20180408235132_3Migration.Designer.cs" />
+    <Compile Remove="Migrations\20180408235312_3Migration.cs" />
+    <Compile Remove="Migrations\20180408235312_3Migration.Designer.cs" />
+    <Compile Remove="Migrations\20180409000202_3Migration.cs" />
+    <Compile Remove="Migrations\20180409000202_3Migration.Designer.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1" />
+    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\engine1\jquery.js" />
+    <None Include="wwwroot\js\engine1\script.js" />
+    <None Include="wwwroot\js\engine1\wowslider.js" />
+    <None Include="wwwroot\js\engine1\wowslider.mod.js" />
+  </ItemGroup>
+
+</Project>

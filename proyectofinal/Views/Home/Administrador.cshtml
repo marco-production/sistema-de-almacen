@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Administrador";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<link href="~/css/Estilo123.css" rel="stylesheet" />
+<h2>Administrador</h2>
+<p>Seleccione una acci&oacuten</p>
+<hr />
+<section id="admi">
+    <a asp-action="Index" asp-controller="Administrador"><button type="button" id="btn1">Usuarios 👤</button></a>
+    <a asp-action="Index" asp-controller="Admi_empresas"><button type="button" id="btn2">Empresas 🏢</button></a>
+    <a asp-action="IndexAdmi" asp-controller="Productoes"><button type="button" id="btn3">Productos 📦</button></a>
+</section>

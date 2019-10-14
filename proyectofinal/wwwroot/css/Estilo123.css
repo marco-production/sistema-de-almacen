@@ -1,0 +1,98 @@
+﻿#Caja1 {
+    padding-top: 200px;
+    padding-bottom: 340px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #E6E4E4;
+}
+#Caja_nosotros {
+    width: 80%;
+    height: auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.5);
+}
+#Caja_admi {
+    width: auto;
+    height: auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.5);
+}
+#Caja_nosotros_2 {
+    width: 95%;
+    height: auto;
+    background-color: #eee4e4;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.5);
+}
+
+#admi{
+margin-top:50px;
+}
+#btn1, #btn2, #btn3 {
+    width: 300px;
+    height: 120px;
+    font-size: 30px;
+    margin-right: 20px;
+    border-radius: 5px;
+    color: white;
+    /*font-weight:bold;*/
+}
+#btn1 {
+background-color:darkcyan;
+}
+#btn2 {
+    background-color:darkred;
+}
+#btn3 {
+    background-color:darkgoldenrod;
+}
+#btn4 {
+    background-color: #898080;
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 5px;
+    color: white;
+    font-family: latoregular;
+}
+/**Hover**/
+#btn1:hover{
+    background-color:#1faaaa;
+}
+
+#btn2:hover{
+    background-color:#b41c1c;
+}
+
+#btn3:hover{
+    background-color:#cb9c27;
+}
+#btn4:hover {
+    background-color:#e9b022;
+}
+/**Pagina Inventario**/
+#inventario table{
+    border-radius: 5px;
+    background-color:#acdeef;
+}
+#cl1 {
+    background-color: #0b526b;
+    color: #f8cb59;
+}
+#inventario p {
+    font-size: 23px;
+    padding:5px;
+}
+#cl2 {
+    background-color: #156682;
+    color: white;
+}
+#cl3 {
+    padding: 3px;
+}
+

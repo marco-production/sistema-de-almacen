@@ -1,0 +1,69 @@
+﻿@model proyectofinal.Models.ApplicationUser
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Editando perfil de usuario</h2>
+
+<h4>Almacenes Guitar</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label class="control-label">Nombre completo</label>
+                <input asp-for="CompletoNombre" class="form-control" />
+                <span asp-validation-for="CompletoNombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Nombre de usuario</label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="EmailConfirmed" /> Confirmar Email
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Numero de telefono</label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="PhoneNumberConfirmed" /> Confirmar Numero de telefono
+                    </label>
+                </div>
+            </div>
+            <!--Division-->
+            <div class="form-group">
+                <label asp-for="ConcurrencyStamp" class="control-label"></label>
+                <input asp-for="ConcurrencyStamp" class="form-control" readonly="readonly" />
+                <span asp-validation-for="ConcurrencyStamp" class="text-danger"></span>
+            </div>
+                <!--Division-->
+                <div class="form-group">
+                    <input type="submit" value="Guardar" class="btn btn-default"/>
+                </div>
+                <div>
+                    <a asp-action="Index">Volver al perfil</a>
+                </div>
+</form>
+    </div>
+</div>
+
+
+

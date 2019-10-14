@@ -1,0 +1,61 @@
+﻿@model IEnumerable<proyectofinal.Models.ApplicationUser>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<br />
+<h2>Perfil de usuario</h2>
+
+<p>
+    Almacenes Guitar
+</p><br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nombre Completo
+            </th>
+            <th>
+                Nombre de usuario
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                Contraseña
+            </th>
+            <th>
+                Numero de telefono
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @UserManager.GetUserAsync(User).Result?.CompletoNombre
+            </td>
+            <td>
+                @UserManager.GetUserAsync(User).Result?.UserName
+            </td>
+            <td>
+                @UserManager.GetUserAsync(User).Result?.Email
+            </td>
+            <td>
+                <p>******************</p>
+            </td>
+            <td>
+                @UserManager.GetUserAsync(User).Result?.PhoneNumber
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@UserManager.GetUserAsync(User).Result?.Id" class="btn btn-success">Editar</a> |
+                <a asp-action="Details" asp-route-id="@UserManager.GetUserAsync(User).Result?.Id" class="btn btn-info">Detalles</a>
+            </td>
+        </tr>
+
+    </tbody>
+</table>

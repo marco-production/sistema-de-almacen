@@ -1,0 +1,453 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using proyectofinal.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Almacenes Guitar</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Almacenes Guitar</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link href="~/css/navmenu/styles.css" rel="stylesheet" />
+    <link href="~/css/portfolio.jquery.css" rel="stylesheet" />
+    <link href="~/css/fonticons.css" rel="stylesheet" />
+    <link href="~/css/stylesc.css" rel="stylesheet" />
+    <link href="~/css/stylesheet.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/bootstrapcsc.min.css" rel="stylesheet" />
+    <!--For Plugins external css-->
+    <link rel="stylesheet" href="assets/css/plugins.css" />
+    <!--Theme custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar-collapse">
+    @await Html.PartialAsync("_MenuPartial")
+    @RenderBody()
+    <section id="home" class="home text-right">
+        <div class="overlay">
+            <div class="container">
+                        <div class="main_home_content">
+                            <div class="single_home">
+                                <div class="main_home wow fadeInUp" data-wow-duration="700ms">
+                                    <h1>REGISTRA TU EMPRESA</h1>
+                                    <h1 class="subtitle">La mejor web para llevar tus inventario</h1>
+                                    <div class="video_play_icon">
+                                        <a asp-action="Create" asp-controller="Empresa"><img src="~/images/fotos/ir.png" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="service" class="service">
+        <div class="container">
+            <div class="row">
+                <a href="#lessons" class="service_border_raund text-center">
+                    <img src="~/images/downicon.png" />
+                </a>
+                <div class="main_service_area sections text-center">
+                    <div class="head_title text-center">
+                        <h2><b>SERVICIOS</b></h2>
+                        <div class="separator"></div>
+                        <p>
+                            <b>Almacenes Guitar </b>es un sistema permite llevar un
+                            inventario de todos los productos de la empresa para controlar
+                            los productos y sus cantidades, podrán agregar productos y
+                            guardar todos los datos relacionados al producto, reportes
+                            de inventario, incluyendo las cantidades de los distintos
+                            productos ordenados por categorías. Este sistema está abierto
+                            para todas las organizaciones, de forma que cualquier empresa
+                            podrá registrarse y guardar sus datos.
+                        </p>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="single_service">
+                            <div class="single_service_icon">
+                                <p>📦</p>
+                            </div>
+                            <h3>
+                                ALMACEN VIRTUAL
+                            </h3>
+                            <div class="separator"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="single_service">
+                            <div class="single_service_icon">
+                                <p>📑</p>
+                            </div>
+                            <h3>
+                                INVENTARIO
+                            </h3>
+                            <div class="separator"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="single_service">
+                            <div class="single_service_icon">
+                                <p>📊</p>
+                            </div>
+                            <h3>
+                                LOGISTICA
+                            </h3>
+                            <div class="separator"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lessons" class="lessons">
+        <div class="container">
+            <div class="row">
+                <div class="main_lessons">
+                    <div class="col-sm-8 col-sm-offset-1">
+                        <div class="main_lessons_area sections">
+                            <div class="lesson_title">
+                                <font color="White"><h1>Almacenes virtuales</h1></font>
+                                <p>Son faciles de utilizar</p>
+                            </div>
+                            <div class="lesson_content">
+                                <ul class="lessonsborder">
+                                    <li> <i>✔</i> <h3>En cualquier lugar del mundo.</h3></li>
+                                    <li> <i>✔</i> <h3>A cualquier hora.</h3></li>
+                                    <li> <i>✔</i> <h3>Para todo tipo de empresas.</h3></li>
+                                    <li> <i>✔</i> <h3>Utilizando los mejores servidores del mundo</h3></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="main_portfolio sections">
+                    <div class="head_title text-center">
+                        <h2>Almacen Online</h2>
+                        <div class="separator"></div>
+                        <p>
+                            Un usuario puede añadir una o mas empresas en una
+                            misma cuenta, agregar productos y separlos por tipo
+                            o categia, de igualmera puede añadirle el peso,
+                            cantidad, entre otros caracteristicas. Todo de una
+                            manera muy facil y acomodando a nuestros usuarios
+                            para que se sientan lo mas atisfechos posibles.
+                        </p>
+                    </div>
+                </div>
+                <div class="main_portfolio_content_area">
+                    <div class="main_portfolio_content">
+                        <div class="single_portfolio_content">
+                            <div class="col-sm-4 col-xs-12">
+                                <div data-toggle="modal" data-target="#myModal" class="single_content_item">
+                                    <a asp-controller="Empresa" asp-action="Index">
+                                        <img src="~/images/fotos/empresa.jpg" />
+                                        <div class="single_portfolio_overlay">
+                                            <font color="White"><p>🏢 Agregar Empresa</p></font>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-xs-12">
+                                <div class="row">
+                                    <div class="col-sm-12 col-xs-12">
+                                        <div data-toggle="modal" data-target="#myModal" class="single_content_item single_content_item2">
+                                            <a asp-controller="Productoes" asp-action="Index">
+                                                <img src="~/images/fotos/producto.jpg" />
+                                                <div class="single_portfolio_overlay">
+                                                    <font color="White"><p>📦 Agregar Producto</p></font>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-xs-12">
+                                        <div data-toggle="modal" data-target="#myModal" class="single_content_item single_content_item2">
+                                            <a asp-controller="Productoes" asp-action="Inventario">
+                                                <img src="~/images/fotos/Inventario.png" />
+                                                <div class="single_portfolio_overlay">
+                                                    <font color="White"><p>📊 Inventarios</p></font>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-5 col-xs-12">
+                                <div data-toggle="modal" data-target="#myModal" class="single_content_item">
+                                    <a asp-controller="User" asp-action="Index">
+                                        <img src="~/images/fotos/fp.jpg" />
+                                        <div class="single_portfolio_overlay">
+                                            <font color="White"><p>👤 Perfil de usuario</p></font>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br /><br />
+    <section id="callus" class="callus">
+        <div class="callus_overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="main_callus">
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="single_callus">
+                                <div class="skypeicon_right">
+                                    <h2>Llamanos a la central</h2>
+                                    <h3>APRENDE A UTILIZAR NUESTRA WEB</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="single_callus_right">
+                                <a class="btn btn-larg">809-234-5675</a>
+                                <a href="" class="btn btn-larg">MAS SOBRE NOSOTROS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="news">
+        <div class="container">
+            <div class="row">
+                <div class="main_news sections">
+                    <div class="head_title text-center">
+                        <h2>Ultimas noticias</h2>
+                        <div class="separator"></div>
+                        <p>
+                            Aqui encontraras las ultimas noticias acerca de nuestros
+                            almacenes virtuales y podras estar al tanto de todo lo
+                            que pasa en nuestro sistema Web. Los desarrolladores
+                            siempre estaran pendientes y atentos a los usuarios para poder
+                            brindar la mejor esperiencia posible en nuestro sistema Web, Almacenes Guitar.
+                        </p>
+                    </div>
+                    <div class="main_news_content_area">
+                        <div class="main_news_content">
+                            <div class="col-sm-5 ">
+                                <div class="single_news_content_left">
+                                    <div class="news_content_left_thumbnail">
+                                        <img src="~/images/fotos/industria.jpg" />
+                                    </div>
+                                    <div class="news_content_left_content">
+                                        <p class="subtitle"><h3>¿Que es un Almacen?</h3></p>
+                                        <div class="separator2"></div>
+                                        <p>
+                                            Un almacén es un lugar o espacio físico para el almacenaje
+                                            de bienes dentro de la cadena de suministro. Los almacenes
+                                            son una infraestructura imprescindible para la actividad de
+                                            todo tipo de agentes económicos (agricultores, ganaderos, mineros,
+                                            industriales, transportistas, importadores, exportadores, comerciantes,
+                                            intermediarios, consumidores finales, etc.) Constituyen una parte
+                                            habitual de las explotaciones agrarias y ganaderas (en muchos casos
+                                            formando parte de la vivienda rural tradicional o de construcciones peculiares).
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-7 col-xs-12">
+                                <div class="news_right_content">
+                                    <div class="single_news_right_content">
+                                        <div class="row">
+                                            <div class="col-sm-3 col-xs-3 no-padding">
+                                                <div class="single_right_img">
+                                                    <img src="~/images/fotos/tiempo.jpg" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8 col-xs-8 no-padding">
+                                                <div class="single_right_content">
+                                                    <p class="subtitle">Con nuestro sistema evitas pérdida de tiempo realizando inventarios por desconfianza del personal y del sistema</p>
+                                                    Almacenes Guitar
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-1 col-xs-1 no-padding">
+                                                <div class="single_icon_area text-center">
+                                                    <div class="single_icon_content">
+                                                        ✔
+                                                        <p>✔</p>
+                                                    </div>
+                                                    <div class="single_icon_content single_icon_content_calander">
+                                                        100%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="single_news_right_content">
+                                        <div class="row">
+                                            <div class="col-sm-3 col-xs-3 no-padding">
+                                                <div class="single_right_img">
+                                                    <img src="~/images/fotos/ERP.jpg" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8 col-xs-8 no-padding">
+                                                <div class="single_right_content">
+                                                    <p class="subtitle">Recibir, preparar y alojar.</p>
+                                                    Almacenes Guitar
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-1 col-xs-1 no-padding">
+                                                <div class="single_icon_area text-center">
+                                                    <div class="single_icon_content">
+                                                        ✔
+                                                        <p>✔</p>
+                                                    </div>
+                                                    <div class="single_icon_content single_icon_content_calander">
+                                                        100%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="single_news_right_content">
+                                        <div class="row">
+                                            <div class="col-sm-3 col-xs-3 no-padding">
+                                                <div class="single_right_img">
+                                                    <img src="~/images/fotos/1.jpg" />
+
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8 col-xs-8 no-padding">
+                                                <div class="single_right_content">
+                                                    <p class="subtitle">Administradores agregan nuevas funcionalidades al sitio web.</p>
+                                                    Marco Antonio De la cruz Santos
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-1 col-xs-1 no-padding">
+                                                <div class="single_icon_area text-center">
+                                                    <div class="single_icon_content">
+                                                        ✔
+                                                        <p>✔</p>
+                                                    </div>
+                                                    <div class="single_icon_content single_icon_content_calander">
+                                                        80%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer_widget" class="footer_widget">
+        <div class="container">
+            <div class="row">
+                <div class="main_widget">
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="single_widget wow fadeIn" data-wow-duration="800ms">
+                                <div class="footer_logo">
+                                    <img src="~/images/logo2.png" alt="" />
+
+                                </div>
+                                <p>
+                                    Aqui encontraras las ultimas noticias acerca de nuestros 
+                                    almacenes virtuales y podras estar al tanto de todo lo 
+                                    que pasa en nuestro sistema Web. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="single_widget wow fadeIn" data-wow-duration="800ms">
+                                <h4 class="footer_title">CONTACTO</h4>
+                                <div class="separator3"></div>
+                                <ul>
+                                    <li>info@guitarlessons.com</li>
+                                    <li>0123 456 789 0112</li>
+                                    <li>Greenplatz Ben 29, Germany 60435</li>
+                                    <li>(0012) 654 356 445</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="single_widget wow fadeIn" data-wow-duration="800ms">
+                                <h4 class="footer_title">ÚLTIMAS NOTICIAS</h4>
+                                <div class="separator3"></div>
+                                <ul>
+                                    <li class="single_latest_news">
+                                        <p class="latest_date">02.08.2015</p>
+                                        <p class="subtitle">Etiam tempor odio tellus.</p>
+                                        <p class="details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in egestas lectus. Etiam tempor odio tellus.</p>
+                                    </li>
+                                    <li class="single_latest_news">
+                                        <p class="latest_date">02.08.2015</p>
+                                        <p class="subtitle">Etiam tempor odio tellus.</p>
+                                        <p class="details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in egestas lectus. Etiam tempor odio tellus.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="copyright_text text-center">
+                        <p class=" wow fadeInRight" data-wow-duration="1s">Almecenes Guitar 2018. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- START SCROLL TO TOP  -->
+    <div class="scrollup">
+        <font size="20px"><i><a href="#">🔼</a></i></font>
+    </div>
+
+    <script src="~/js/JavaS/jquery-1.11.2.min.js"></script>
+    <script src="~/js/JavaS/bootstrap.min.js"></script>
+    <script src="~/js/JavaS/jquery.easypiechart.min.js"></script>
+    <script src="~/js/JavaS/portfolio.jquery.js"></script>
+    <script src="~/js/JavaS/jquery.mixitup.min.js"></script>
+    <script src="~/js/JavaS/jquery.easing.1.3.js"></script>
+    <script src="~/js/JavaS/jquery.slicknav.min.js"></script>
+    <script src="~/js/JavaS/gmaps.min.js"></script>
+
+    <script src="http://maps.google.com/maps/api/js"></script>
+    <script>
+        var map = new GMaps({
+            el: '.ourmaps',
+            scrollwheel: false,
+            lat: -12.043333,
+            lng: -77.028333
+        });
+    </script>
+    <script src="~/js/JavaS/plugins.js"></script>
+    <script src="~/js/JavaS/main.js"></script>
+</body>
+</html>

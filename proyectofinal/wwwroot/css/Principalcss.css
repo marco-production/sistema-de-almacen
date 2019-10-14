@@ -1,0 +1,46 @@
+/*footer section*/
+.footer1 {
+    background: #032F3E;
+    position: absolute;
+    bottom: 0;
+    width:100%;
+}
+
+.copyright_text p {
+    color: #D2D3D5;
+    font-size: 17px;
+    line-height: 25px;
+    padding: 35px;
+    max-width: 100%;
+}
+
+    .copyright_text p i {
+        padding: 0px 10px;
+        color: #ff0000;
+    }
+
+    .copyright_text p a {
+        padding: 0px 10px;
+        color: #ab987a;
+    }
+
+/* scrollup */
+
+
+
+.scrollup:hover {
+    background: #222;
+    opacity: 1;
+}
+
+.scrollup i {
+    font-size: 13px;
+    position: absolute;
+    opacity: 1;
+    color: #fff;
+    left: 50%;
+    top: 50%;
+    margin-top: -7px;
+    margin-left: -6px;
+    text-decoration: none;
+}

@@ -1,0 +1,10 @@
+@using Microsoft.AspNetCore.Identity
+@using proyectofinal.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+    <ul class="nav navbar-nav navbar-right">
+        <li><a asp-area="" asp-controller="Account" asp-action="Register">Registro</a></li>
+        <li><a asp-area="" asp-controller="Account" asp-action="Login">Iniciar Sesi&oacuten</a></li>
+    </ul>

@@ -1,0 +1,60 @@
+﻿@model proyectofinal.Models.ApplicationUser
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<h2>Elinimar usuario</h2>
+
+<h3>
+    ¿Estás seguro que quieres eliminar este usuario?
+</h3>
+<div>
+    <h4>Al eliminar esta cuenta se eliminaran todos los datos del usuario, datos de las empresas y productos.</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nombre completo
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CompletoNombre)
+        </dd>
+        <dt>
+            Nombre de usuario
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>
+            Confirmar Email
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmailConfirmed)
+        </dd>
+        <dt>
+            Telefono
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+        <dt>
+            Confirmar telefono
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumberConfirmed)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Volver a la lista de usuarios</a>
+    </form>
+</div>
